@@ -12,6 +12,13 @@ class Acronym
 
 end
 
+#Alternative Solution using Regex
+class Acronym
+  def self.abbreviate(acronym)
+    acronym = acronym.scan(/^([\w])|\W([\w])|([A-Z])[a-z]/).join.upcase
+  end
+end
+
 
 #Sample Code (Will run only if launched from acronym.rb)
 if __FILE__ == $0

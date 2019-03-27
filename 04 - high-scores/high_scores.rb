@@ -20,6 +20,7 @@ class HighScores
     sorted_array = @scores_array.sort.reverse
     sorted_array_size = sorted_array.size
 
+    #You could have also made it less complicated by saying sorted_array.first(3).
     if sorted_array_size >= 3
       sorted_array[0..2]
     else
@@ -29,7 +30,3 @@ class HighScores
   end
 
 end
-#sample code
-scores = [40,20,30,50]
-HighScores.new(scores).scores
-p HighScores.new(scores).personal_top_three
